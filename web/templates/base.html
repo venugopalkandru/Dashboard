@@ -1,0 +1,63 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head_meta %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% endblock %}
+
+    <title>{% block title %}Home{% endblock %}</title>
+	<!-- core CSS -->
+    {% block css %}
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/animate.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/owl.carousel.css" %}" rel="stylesheet">
+    <link href="{% static "css/owl.transitions.css" %}" rel="stylesheet">
+    <link href="{% static "css/prettyPhoto.css" %}" rel="stylesheet">
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+    <link href="{% static "css/responsive.css" %}" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{% static "images/ico/favicon.ico" %}">
+    <link rel="{% static "apple-touch-icon-precomposed" %}" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="{% static "apple-touch-icon-precomposed" %}" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="{% static "apple-touch-icon-precomposed" %}" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="{% static "apple-touch-icon-precomposed" %}" href="images/ico/apple-touch-icon-57-precomposed.png">
+    {% endblock %}
+</head><!--/head-->
+
+{% block body %}
+
+{% block content %}
+{% endblock content %}
+
+{% endblock body %}
+
+{% block scripts %}
+<script src="{% static "js/jquery.js" %}"></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="{% static "js/owl.carousel.min.js" %}"></script>
+<script src="{% static "js/mousescroll.js" %}"></script>
+<script src="{% static "js/smoothscroll.js" %}"></script>
+<script src="{% static "js/jquery.prettyPhoto.js" %}"></script>
+<script src="{% static "js/jquery.isotope.min.js" %}"></script>
+<script src="{% static "js/jquery.inview.min.js" %}"></script>
+<script src="{% static "js/wow.min.js" %}"></script>
+<script src="{% static "js/main.js" %}"></script>
+{% endblock %}
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("body").css({opacity:1,'margin-left':0});
+  {% block onready %}
+  {% endblock %}
+});
+</script>
+
+</body>
+</html>

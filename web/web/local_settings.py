@@ -5,3 +5,5 @@ DATABASES = {
         'USER': 'root',
     }
 }
+
+STATIC_ROOT = '/var/www/myvoice_static'
